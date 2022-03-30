@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  minharede:
+    driver: bridge
+
+volumes:
+  meuvolume: 
+
+services:
+  nginx:
+    image: nginx
+    networks: 
+      - minharede
+    volumes:
+      - meuvolume
+    ports:
+      - 8080:80
+    
